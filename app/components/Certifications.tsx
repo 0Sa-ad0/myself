@@ -4,7 +4,7 @@ import { useState } from 'react';
 import { motion } from 'framer-motion';
 
 export default function Certifications() {
-  const [showStatic, setShowStatic] = useState(true);
+  const [showStatic] = useState(true);
 
   return (
     <section id="certifications" className="py-20">

@@ -1,17 +1,18 @@
-"use client"
+"use client";
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect } from "react";
 
 const education = [
-  { 
-    id: 1, 
-    degree: 'B.Sc. in Computer Science and Engineering (CSE)', 
-    institution: 'American International University-Bangladesh',
-    link: 'https://www.aiub.edu/',
-    enrollment: 'January 2022 - Present',
-    graduation: 'April 2025',
+  {
+    id: 1,
+    degree: "B.Sc. in Computer Science and Engineering (CSE)",
+    institution: "American International University-Bangladesh",
+    link: "https://www.aiub.edu/",
+    enrollment: "January 2022 - Present",
+    graduation: "April 2025",
+    year: "2025",
   },
-]
+];
 
 export default function Education() {
   const [currentDate, setCurrentDate] = useState(new Date());
@@ -24,7 +25,7 @@ export default function Education() {
     return () => clearInterval(timer);
   }, []);
 
-  const isGraduated = currentDate > new Date('2025-04-30T23:59:59');
+  const isGraduated = currentDate > new Date("2025-04-30T23:59:59");
 
   return (
     <section id="education" className="py-20 bg-gray-100">
@@ -37,13 +38,13 @@ export default function Education() {
                 <strong>Degree:</strong> {edu.degree}
               </p>
               <p>
-                <strong>Institution:</strong> 
+                <strong>Institution:</strong>
                 {edu.institution}
                 {edu.link && (
-                  <a 
-                    href={edu.link} 
-                    target="_blank" 
-                    rel="noopener noreferrer" 
+                  <a
+                    href={edu.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="text-blue-500 ml-1 hover:underline"
                   >
                     (AIUB)
@@ -56,7 +57,10 @@ export default function Education() {
                 </p>
               )}
               <p>
-                <strong>{isGraduated ? 'Graduated' : 'Expected Graduation'}:</strong> {isGraduated ? 'April 2025' : edu.graduation}
+                <strong>
+                  {isGraduated ? "Graduated" : "Expected Graduation"}:
+                </strong>{" "}
+                {isGraduated ? "April 2025" : edu.graduation}
               </p>
               {edu.year && (
                 <p>
@@ -68,6 +72,5 @@ export default function Education() {
         </div>
       </div>
     </section>
-  )
+  );
 }
-

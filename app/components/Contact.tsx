@@ -2,7 +2,6 @@
 
 import { motion } from "framer-motion";
 import { AiOutlineMail } from "react-icons/ai"; // Import mail icon from react-icons
-import { useState } from "react";
 import AnimatedSection from "./AnimatedSection";
 
 export default function Contact() {

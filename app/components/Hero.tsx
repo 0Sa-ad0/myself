@@ -40,7 +40,7 @@ export default function Hero() {
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.5, delay: 0.3 }}
           >
-            Hi, I'm SAAD
+            Hi, I am SAAD
           </motion.h1>
           <motion.p
             className="text-xl mb-6"
