@@ -1,19 +1,11 @@
 import type { NextConfig } from "next";
 
+const isGithubPages = process.env.NODE_ENV === "production";
+
 const nextConfig: NextConfig = {
-  basePath: "/myself/app",
-  assetPrefix: "/myself/app/",
-  output: "export",
-};
-
-const isGithubPages = process.env.NODE_ENV === 'production';
-
-const basePath = isGithubPages ? '/myself' : '';
-const assetPrefix = isGithubPages ? '/myself/' : '';
-
-module.exports = {
-  basePath,
-  assetPrefix,
+  output: "export", 
+  basePath: isGithubPages ? "/myself" : "", 
+  assetPrefix: isGithubPages ? "/myself/" : "", 
 };
 
 export default nextConfig;
